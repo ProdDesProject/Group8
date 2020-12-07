@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 9186145915863063002}
   - component: {fileID: 6365214086092931509}
   - component: {fileID: 9026799274217750372}
-  - component: {fileID: 1466538682195318130}
+  - component: {fileID: 7443257980663356390}
   m_Layer: 10
   m_Name: AIBullet 1
   m_TagString: Untagged
@@ -135,7 +135,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &1466538682195318130
+--- !u!114 &7443257980663356390
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -148,4 +148,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+  itemSpawnChance: 0
+  spawnableItem: {fileID: 0}
   animator: {fileID: 0}
+  damageTakenAudio: {fileID: 0}
+  audio: {fileID: 0}

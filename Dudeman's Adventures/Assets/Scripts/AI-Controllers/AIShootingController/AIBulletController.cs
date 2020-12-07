@@ -32,7 +32,6 @@ public class AIBulletController : MonoBehaviour
         if(col.gameObject.tag == "Player")
         {
             GameObject.Find("Player").GetComponent<RestartOnPlayerDeath>().TakeDamage(5);
-            Debug.Log("Hit the player");
             Destroy(this.gameObject);
         }
         else
@@ -45,7 +44,6 @@ public class AIBulletController : MonoBehaviour
     void DestroyBullet()
     {
         Destroy(this.gameObject);
-        Debug.Log("Was destroy by the enviorment");
     }
 
 }
