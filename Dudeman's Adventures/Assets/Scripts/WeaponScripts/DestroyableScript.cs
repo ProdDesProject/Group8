@@ -60,6 +60,7 @@ public class DestroyableScript : MonoBehaviour
 
     void Die()
     {
+
         if(spawnableItem != null)
         {
             SpawnHpItem();

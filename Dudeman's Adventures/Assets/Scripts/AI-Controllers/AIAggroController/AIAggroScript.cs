@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class AIAggroScript : MonoBehaviour
 {
-    [SerializeField]
-    Transform player;
+    public GameObject playerTarget;
+    private Transform player;
     [SerializeField]
     float aggroRange;
     [SerializeField]
@@ -35,6 +35,7 @@ public class AIAggroScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        player = playerTarget.transform;
         baseScale = transform.localScale;
         rb2d = GetComponent<Rigidbody2D>();
         rb2d.gravityScale = 30f;   
