@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class AIAggroScript : MonoBehaviour
 {
-    public GameObject playerTarget;
-    private Transform player;
+    public Transform player;
     [SerializeField]
     float aggroRange;
     [SerializeField]
@@ -35,7 +34,6 @@ public class AIAggroScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = playerTarget.transform;
         baseScale = transform.localScale;
         rb2d = GetComponent<Rigidbody2D>();
         rb2d.gravityScale = 30f;   
@@ -57,8 +55,6 @@ public class AIAggroScript : MonoBehaviour
                 if(isSearching == false)
                 {
                     isSearching = true;
-                    //Player will be chased for 2 seconds and after that the AI stops. 
-                    //Might wanna do a coroutine for this in the future.
                     Invoke("StopChasingPlayer", aggroDuration);
                 }
             }

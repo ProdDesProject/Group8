@@ -21,7 +21,7 @@ public class FireRatePowerUp : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        if(collider.name == "Player" && !picked)
+        if(collider.tag == "Player" && !picked)
         {
             Destroy(gameObject);
 

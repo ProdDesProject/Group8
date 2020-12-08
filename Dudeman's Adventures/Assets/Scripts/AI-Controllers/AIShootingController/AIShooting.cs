@@ -17,6 +17,7 @@ public class AIShooting : MonoBehaviour
     float aggroRange;
     [SerializeField] // checkbox for the dev when placing an AI if it is facing Left or not !!! VERY IMPORTANT !!!
     bool isFacingLeft = true;
+    public float aggroDuration; // timer for how long the player will be aggroed
 
     Vector3 baseScale;
 
@@ -62,9 +63,7 @@ public class AIShooting : MonoBehaviour
                 if(isSearching == false)
                 {
                     isSearching = true;
-                    //Player will be chased for 2 seconds and after that the AI stops. 
-                    //Might wanna do a coroutine for this in the future.
-                    Invoke("StopChasingPlayer", 2);
+                    Invoke("StopChasingPlayer", aggroDuration);
                 }
             }
         }
